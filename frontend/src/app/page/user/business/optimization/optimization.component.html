@@ -1,0 +1,40 @@
+<h2 class="page-title" [ngClass]="{ mobile: utilService.isMobile }">
+  <div>{{ "home.text.optimization" | translate }}</div>
+</h2>
+
+<section [ngClass]="{ mobile: utilService.isMobile }">
+  <div class="description">
+    <div>
+      {{ "business.text.optimization-description" | translate }}
+    </div>
+  </div>
+  <div class="text-area">
+    <div>
+      <div class="text">
+        {{ "business.text.optimization-detail" | translate }}
+      </div>
+      <div class="text">
+        {{ "business.text.optimization-detail2" | translate }}
+      </div>
+    </div>
+  </div>
+
+  <div class="img-area">
+    <div class="box"></div>
+    <div class="box"></div>
+    <img
+      src="/assets/image/img-optimization.png"
+      alt="optimization"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    />
+    <button
+      *ngIf="!utilService.isMobile"
+      class="button-top"
+      (click)="scrollTop()"
+    >
+      <i class="btn-top"></i>
+      <div>Top</div>
+    </button>
+  </div>
+</section>

@@ -1,0 +1,146 @@
+.page-title {
+  margin-bottom: 38px;
+}
+.page-title.mobile {
+  margin-bottom: 32px;
+  padding: 0 25px;
+}
+
+section {
+  padding-bottom: 49px;
+}
+.description {
+  font-family: NotoSansKR-light;
+  font-size: 23px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  color: var(--font-dark-black);
+  margin-bottom: 73px;
+}
+section.mobile .description {
+  font-size: 14px;
+  letter-spacing: -0.7px;
+  margin-bottom: 22px;
+  padding: 0 25px;
+}
+.img-area {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+section.mobile .img-area {
+  padding: 0 12px;
+}
+section > img {
+  width: 623px;
+  justify-self: center;
+}
+
+section.mobile .img-area img {
+  width: 100%;
+}
+section .contents-list {
+  margin-top: 74px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+section.mobile .contents-list {
+  flex-direction: column;
+  margin-top: 50px;
+}
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 69px;
+}
+section.mobile .contents {
+  margin: 0;
+}
+.contents img {
+  width: 359px;
+  margin-bottom: 24px;
+}
+section.mobile .contents img {
+  width: 100%;
+}
+.contents .title {
+  font-family: NotoSansKR-bold;
+  font-size: 17px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.85px;
+  text-align: center;
+  color: var(--font-black);
+  margin-bottom: 19px;
+}
+.contents .table li {
+  display: flex;
+  border: none;
+}
+section.mobile .table {
+  padding-left: 0;
+}
+.contents .thead {
+  width: 109px;
+  font-family: NotoSansKR-bold;
+  font-size: 11px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  color: var(--white);
+  margin-bottom: 3px;
+}
+.contents .text {
+  width: 247px;
+  height: 35px;
+  display: flex;
+  padding: 0 15px;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: NotoSansKR-regular;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.65px;
+  color: var(--font-black);
+  background-color: var(--light-grey);
+}
+section.mobile .contents .text {
+  width: 100%;
+}
+.contents .tbody {
+  margin-bottom: 3px;
+}
+
+section.mobile .contents .tbody {
+  width: 100%;
+}
+
+.button-top {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% + 550px);
+}
+
+@media (max-width: 1200px) {
+  .button-top {
+    left: 1150px;
+  }
+}

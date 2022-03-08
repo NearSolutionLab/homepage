@@ -1,0 +1,539 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* font */
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: bolder;
+  src: url("assets/font/NotoSans/NotoSansKR-Black.otf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansKR-bold";
+  src: url("assets/font/NotoSans/NotoSansKR-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansKR-light";
+  src: url("assets/font/NotoSans/NotoSansKR-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NotoSansKR-medium";
+  src: url("assets/font/NotoSans/NotoSansKR-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansKR-regular";
+  src: url("assets/font/NotoSans/NotoSansKR-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 100;
+  src: url("assets/font/NotoSans/NotoSansKR-Thin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ArchivoRoman";
+  src: url("assets/font/Archivo/Archivo-Italic-VariableFont.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("assets/font/Archivo/Archivo-VariableFont.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --dark-blue: #2d3b9c;
+  --main-color: #3448cc;
+  --font-black: #222222;
+  --font-dark-black: #000000;
+  --white: #ffffff;
+  --medium-grey: #a8a8a8;
+  --sky-blue: #02e2e7;
+  --grey-border: #e3e3e3;
+  --dark-grey-border: #979797;
+  --dark-grey: #999999;
+  --light-grey: #f7f7f7;
+  --darker-grey: #484848;
+  --red: #ff0d0d;
+  --nav-height: 80px;
+  --home-main-margin-left: 20vw;
+  --home-mobile-margin-left: 25px;
+  --mobile-letter-spacing: -0.7px;
+  --tag-margin-bottom: 8px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+button {
+  outline: none;
+  cursor: pointer;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+.input-box input {
+  border: none;
+  text-indent: 0;
+  width: 100%;
+  background-color: inherit;
+}
+textarea {
+  border: none;
+  resize: none;
+  box-shadow: none;
+  width: 100%;
+}
+input:focus {
+  outline: none;
+}
+textarea:focus {
+  outline: none;
+}
+
+/* title */
+h2.page-title {
+  font-family: NotoSansKR-bold;
+  font-size: 33px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -3.75px;
+  color: var(--main-color);
+  margin: 0;
+}
+h2.page-title.mobile {
+  font-size: 23px;
+  letter-spacing: -2.88px;
+}
+
+/* spinner */
+.loading {
+  position: fixed;
+  z-index: 1000;
+  height: 1.5em;
+  width: 1.5em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.loading:not(:required):after {
+  content: "";
+  display: block;
+  font-size: 6px;
+  width: 6px;
+  height: 6px;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 1000ms infinite linear;
+  -moz-animation: spinner 1000ms infinite linear;
+  -ms-animation: spinner 1000ms infinite linear;
+  -o-animation: spinner 1000ms infinite linear;
+  animation: spinner 1000ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: rgba(52, 129, 207, 0) 1.5em 0 0 0,
+    rgba(52, 129, 207, 0) 1.1em 1.1em 0 0, rgba(52, 129, 207, 0.1) 0 1.5em 0 0,
+    rgba(52, 129, 207, 0.2) -1.1em 1.1em 0 0,
+    rgba(52, 129, 207, 0.5) -1.5em 0 0 0,
+    rgba(52, 129, 207, 0.7) -1.1em -1.1em 0 0,
+    rgba(52, 129, 207, 0.85) 0 -1.5em 0 0,
+    rgba(52, 129, 207, 1) 1.1em -1.1em 0 0;
+  box-shadow: rgba(52, 129, 207, 0) 1.5em 0 0 0,
+    rgba(52, 129, 207, 0) 1.1em 1.1em 0 0, rgba(52, 129, 207, 0.1) 0 1.5em 0 0,
+    rgba(52, 129, 207, 0.2) -1.1em 1.1em 0 0,
+    rgba(52, 129, 207, 0.5) -1.5em 0 0 0,
+    rgba(52, 129, 207, 0.7) -1.1em -1.1em 0 0,
+    rgba(52, 129, 207, 0.85) 0 -1.5em 0 0,
+    rgba(52, 129, 207, 1) 1.1em -1.1em 0 0;
+}
+
+.button-top {
+  width: 57px;
+  height: 57px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+.button-top > div {
+  margin-top: 2px;
+  font-family: Archivo;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.7px;
+  color: var(--white);
+}
+
+/* form 형식 */
+
+section.form {
+  width: 1200px;
+  padding-bottom: 13px;
+  margin: 0 auto;
+}
+section.form.mobile {
+  width: 100%;
+  padding: 0 21px;
+}
+section.form .text {
+  font-family: NotoSansCJKkr-regular;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 5px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.14px;
+  color: var(--font-black);
+  margin-bottom: 9px;
+}
+
+section.form > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+section.form.mobile > div {
+  flex-direction: column;
+}
+section.form input {
+  font-family: NotoSansCJKkr-regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.14px;
+  color: var(--font-black);
+}
+section.form textarea {
+  font-family: NotoSansCJKkr-regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.14px;
+  color: var(--font-black);
+  height: 100%;
+  resize: none;
+}
+section.form .file {
+  margin-bottom: 27px;
+}
+
+section.form.mobile .file {
+  flex-direction: row;
+}
+section.form .input-box {
+  border: solid 1px var(--grey-border);
+  height: 35px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+section.form .title .input-box {
+  width: 90%;
+  margin-bottom: 20px;
+}
+section.form.mobile .title .input-box {
+  width: 100%;
+  margin-bottom: 15px;
+}
+section.form .button-area {
+  width: 90%;
+  position: relative;
+}
+section.form.mobile .button-area {
+  width: 80%;
+}
+section.form .button-area button {
+  width: 83px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #d8d8d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: NotoSansCJKkr-bold;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.98px;
+  color: var(--font-black);
+  border: none;
+}
+section.form .button-area label {
+  width: 83px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #d8d8d8;
+  font-family: NotoSansKR-bold;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.98px;
+  color: var(--font-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+section.form .button-area input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+section.form .text-area {
+  height: 490px;
+  width: 90%;
+  border: solid 1px var(--grey-border);
+  padding: 6px 15px;
+  margin-bottom: 20px;
+}
+
+section.form.mobile .text-area {
+  height: 40vh;
+  width: 100%;
+  margin-bottom: 15px;
+}
+section.form .register {
+  font-family: NotoSansCJKkr-bold;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.24px;
+  color: var(--white);
+  width: 90px;
+  height: 38px;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin: 0 auto;
+}
+section.form.mobile .register {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 9vh;
+  max-height: 52px;
+  left: 0;
+  z-index: 9;
+}
+/* icon */
+.btn-search {
+  width: 13px;
+  height: 13px;
+  background: url("/assets/icon/btn-search.png") no-repeat;
+}
+.btn-top {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: url("/assets/icon/btn-top.svg") no-repeat;
+}
+
+.btn-more-main {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background: url("/assets//icon/btn-more-main.svg") no-repeat;
+}
+
+.btn-previous-main {
+  display: inline-block;
+  width: 11px;
+  height: 17px;
+  background: url("/assets/icon/btn-previous-main.svg") no-repeat;
+}
+.btn-next-main {
+  display: inline-block;
+  width: 11px;
+  height: 17px;
+  background: url("/assets/icon/btn-next-main.svg") no-repeat;
+}
+.btn-stop-main {
+  display: inline-block;
+  width: 9px;
+  height: 17px;
+  background: url("/assets/icon/btn-stop-main.svg") no-repeat;
+  margin: 0 12px;
+}
+.btn-previous-slide {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background: url("/assets/icon/btn-previous-slide.svg") no-repeat;
+  opacity: 0.5;
+  background-size: contain;
+}
+.m-btn-more .btn-previous-slide:hover {
+  opacity: 1;
+}
+.btn-next-slide {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background: url("/assets/icon/btn-next-slide.svg") no-repeat;
+  opacity: 0.5;
+  background-size: contain;
+}
+.btn-next-slide:hover {
+  opacity: 1;
+}
+.btn-more-solution {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url("/assets/icon/btn-more-solution.svg") no-repeat;
+}
+.btn-download {
+  display: inline-block;
+  width: 37px;
+  height: 50px;
+  background: url("/assets/icon/btn-download.svg") no-repeat;
+}
+
+.btn-home-sub {
+  width: 16px;
+  height: 16px;
+  background: url("/assets/icon/btn-home-sub.svg") no-repeat;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+html,
+body {
+  height: 100%;
+}

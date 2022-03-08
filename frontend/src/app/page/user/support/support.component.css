@@ -1,0 +1,9 @@
+section {
+  padding-top: 70px;
+  min-width: 1200px;
+}
+
+section.mobile {
+  min-width: unset;
+  padding-top: 32px;
+}

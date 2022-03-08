@@ -1,0 +1,27 @@
+<footer [ngClass]="{ mobile: utileService.isMobile }">
+  <div class="company">
+    <div class="company-name">{{ "home.text.company-name" | translate }}</div>
+    <div class="location">{{ "home.text.location" | translate }}</div>
+    <div class="copyright">
+      COPYRIGHT © <span>NearSolution</span>. All rights reserved.
+    </div>
+  </div>
+  <a class="service" (click)="movePage('/solution/nearView')">
+    <img
+      [src]="
+        utileService.isMobile
+          ? '/assets/image/m-img-footer.png'
+          : '/assets/image/img-footer.png'
+      "
+      alt="footer"
+    />
+    <div class="text-area">
+      <div class="text">{{ "home.text.center" | translate }}</div>
+      <div class="text">{{ "home.text.solomon-service" | translate }}</div>
+    </div>
+    <div class="goto">
+      <div class="text">{{ "common.text.goto" | translate }}</div>
+      <i class="btn-more-main"></i>
+    </div>
+  </a>
+</footer>

@@ -1,0 +1,89 @@
+section {
+  width: 1048px;
+}
+section.mobile {
+  width: 100vw;
+}
+h2 {
+  margin: 0;
+}
+.page-title {
+  margin-bottom: 42px;
+}
+.page-title.mobile {
+  padding-left: 25px;
+  margin-bottom: 32px;
+}
+
+.description {
+  font-family: NotoSansKR-light;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  color: var(--font-dark-black);
+  width: 101%;
+}
+section.mobile .description {
+  padding: 0 25px;
+  line-height: 25px;
+  font-size: 14px;
+  letter-spacing: var(--mobile-letter-spacing);
+  margin-bottom: 30px;
+}
+.page-title + .description {
+  margin-bottom: 42px;
+}
+img + .description {
+  margin-bottom: 42px;
+}
+
+section .wrap img {
+  width: 100%;
+  margin-bottom: 62px;
+}
+section.mobile .wrap img {
+  margin-bottom: 41px;
+  padding: 0 17px;
+  width: 70%;
+}
+section.mobile .wrap {
+  display: flex;
+  justify-content: center;
+}
+.img-area {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 41px;
+  position: relative;
+}
+section.mobile .img-area {
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.img-area img:first-child {
+  width: 551px;
+}
+.img-area img + img {
+  width: 467px;
+}
+section.mobile .img-area > img {
+  width: 100vw;
+  margin-bottom: 20px;
+}
+
+.button-top {
+  position: absolute;
+  bottom: -25px;
+  left: calc(50% + 550px);
+}
+
+@media (max-width: 1200px) {
+  .button-top {
+    left: 1150px;
+  }
+}

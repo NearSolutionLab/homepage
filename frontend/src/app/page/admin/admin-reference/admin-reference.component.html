@@ -1,0 +1,7 @@
+<app-menu-bar [mainPage]="'reference'"></app-menu-bar>
+
+<app-admin-reference-list *ngIf="!page"></app-admin-reference-list>
+<app-admin-reference-edit *ngIf="page === 'edit'"></app-admin-reference-edit>
+<app-admin-reference-detail
+  *ngIf="page === 'detail'"
+></app-admin-reference-detail>

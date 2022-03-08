@@ -1,0 +1,72 @@
+<h2 class="page-title" [ngClass]="{ mobile: utilService.isMobile }">
+  {{ "home.text.history" | translate }}
+</h2>
+<section [ngClass]="{ mobile: utilService.isMobile }">
+  <div class="description">
+    <div class="text">{{ "about.text.history-description" | translate }}</div>
+    <div class="text">{{ "about.text.history-description1" | translate }}</div>
+  </div>
+  <div class="wrap">
+    <img
+      [src]="
+        utilService.isMobile
+          ? '/assets/image/m-img-history.png'
+          : '/assets/image/img-history.png'
+      "
+      alt="history"
+      data-aos="flip-left"
+      data-aos-duration="1000"
+    />
+    <div class="contents-list">
+      <div class="contents">
+        <div class="detail">
+          <div class="year first">{{ "common.text.october" | translate }}</div>
+          <div class="text">{{ "about.text.history-detail" | translate }}</div>
+        </div>
+      </div>
+      <div class="contents">
+        <div class="detail">
+          <div class="year second">
+            {{ "common.text.november" | translate }}
+          </div>
+          <div class="text">{{ "about.text.history-detail1" | translate }}</div>
+        </div>
+      </div>
+      <div class="contents">
+        <div class="detail">
+          <div class="year third">{{ "common.text.march" | translate }}</div>
+          <div class="text">{{ "about.text.history-detail2" | translate }}</div>
+        </div>
+        <div class="detail">
+          <div class="year third">
+            {{ "common.text.september" | translate }}
+          </div>
+          <div class="text">{{ "about.text.history-detail3" | translate }}</div>
+        </div>
+      </div>
+      <div class="contents">
+        <div class="detail">
+          <div class="year fourth">
+            {{ "common.text.march" | translate }}
+          </div>
+          <div class="text">{{ "about.text.history-detail4" | translate }}</div>
+        </div>
+        <div class="detail">
+          <div class="year fourth">{{ "common.text.may" | translate }}</div>
+          <div class="text-area">
+            <div class="text">
+              {{ "about.text.history-detail5" | translate }}
+            </div>
+            <div class="text">
+              {{ "about.text.history-detail6" | translate }}
+            </div>
+          </div>
+        </div>
+        <div class="detail">
+          <div class="year fourth">{{ "common.text.july" | translate }}</div>
+          <div class="text">{{ "about.text.history-detail7" | translate }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

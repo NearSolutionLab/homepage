@@ -1,0 +1,125 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 1px var(--grey-border);
+  align-items: center;
+  min-width: 1200px;
+  padding-left: 50px;
+}
+
+footer.mobile {
+  padding-left: 0;
+  min-width: unset;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+footer.mobile .company {
+  padding: 16px 20px 22px 20px;
+}
+.company .company-name {
+  font-family: NotoSansKR;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  color: var(--font-black);
+  margin-bottom: 8px;
+}
+footer.mobile .company .company-name {
+  font-size: 14px;
+}
+.company .location,
+.company .copyright {
+  font-family: NotoSansKR-light;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  font-size: 13px;
+  letter-spacing: -1.29px;
+  color: var(--dark-grey);
+}
+footer.mobile .company .location,
+footer.mobile .company .copyright {
+  font-size: 12px;
+}
+
+.company .copyright span {
+  color: var(--main-color);
+}
+.service {
+  overflow: hidden;
+  width: 202px;
+  position: relative;
+  cursor: pointer;
+}
+
+footer.mobile .service {
+  width: 100vw;
+  overflow: visible;
+}
+.service img {
+  width: 202px;
+  position: relative;
+  transition: 0.5s;
+}
+footer.mobile .service img {
+  width: 100vw;
+}
+.service:hover img {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+.service .text-area {
+  position: absolute;
+  top: 11px;
+  left: 9px;
+}
+.service .text-area .text {
+  font-family: NotoSansKR-light;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.38px;
+  color: var(--white);
+}
+footer.mobile .service .text-area .text {
+  font-size: 11px;
+}
+.service .text-area .text + .text {
+  font-family: NotoSansKR-bold;
+  font-size: 19px;
+  font-weight: bold;
+}
+footer.mobile .service .text-area .text + .text {
+  font-size: 16px;
+}
+.service .goto {
+  position: absolute;
+  bottom: 11px;
+  left: 9px;
+  display: flex;
+  align-items: center;
+}
+footer.mobile .service .goto {
+  left: unset;
+  right: 16px;
+}
+.service .goto .text {
+  font-family: NotoSansKR-light;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  color: var(--white);
+  margin-right: 5px;
+}
+footer.mobile .service .goto .text {
+  font-size: 14px;
+}

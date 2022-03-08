@@ -1,0 +1,35 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 1px var(--grey-border);
+  align-items: center;
+  min-width: 1200px;
+  padding-left: 50px;
+}
+
+.company .company-name {
+  font-family: NotoSansKR;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  color: var(--font-black);
+  margin-bottom: 8px;
+}
+.company .location,
+.company .copyright {
+  font-family: NotoSansKR-light;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  font-size: 13px;
+  letter-spacing: -1.29px;
+  color: var(--dark-grey);
+}
+
+.company .copyright span {
+  color: var(--main-color);
+}

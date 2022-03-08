@@ -1,0 +1,64 @@
+h2 {
+  margin: 22px 0 41px;
+  color: var(--main-color);
+  font-family: NotoSansCJKkr-bold;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input-wrap {
+  width: 90%;
+  margin-bottom: 20px;
+}
+section.form .tag-area .input-box {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+section.form .tag-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+section.form .tag-list .tag {
+  padding: 5px 9px;
+  border-radius: 12.5px;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: NotoSansCJKkr-bold;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.98px;
+  color: var(--main-color);
+  margin-right: 6px;
+  position: relative;
+}
+section.form .tag-list .tag:last-child {
+  margin-right: 0;
+}
+.btn-delete-tag {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url("/assets/icon/btn-delete-tag.svg") no-repeat;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  cursor: pointer;
+}
+
+.contents {
+  margin-bottom: 20px;
+}

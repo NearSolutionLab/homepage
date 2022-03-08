@@ -1,0 +1,35 @@
+<h2>자료 등록</h2>
+
+<section class="form">
+  <div class="title">
+    <div class="text">{{ "support.text.title" | translate }}</div>
+    <div class="input-box">
+      <input
+        type="text"
+        placeholder="{{ 'support.text.is-title' | translate }}"
+        [(ngModel)]="title"
+      />
+    </div>
+  </div>
+  <div class="contents">
+    <div class="text">{{ "support.text.contents" | translate }}</div>
+    <div class="text-area">
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="{{ 'support.text.is-contents' | translate }}"
+        [(ngModel)]="description"
+      ></textarea>
+    </div>
+  </div>
+  <div class="file">
+    <div class="text">{{ "support.text.file" | translate }}</div>
+    <div class="button-area">
+      <label for="file">{{ "support.text.select-file" | translate }}</label>
+      <input type="file" id="file" (change)="fileUpload($event)" />
+    </div>
+  </div>
+  <button class="register" (click)="uploadAttachment()">완료</button>
+</section>

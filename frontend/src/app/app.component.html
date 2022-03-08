@@ -1,0 +1,6 @@
+<div *ngIf="appReady">
+  <router-outlet></router-outlet>
+  <!-- <arv-confirm></arv-confirm> -->
+  <app-toast></app-toast>
+  <div *ngIf="loadingCount" class="loading"></div>
+</div>

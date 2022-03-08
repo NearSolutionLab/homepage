@@ -1,0 +1,89 @@
+<h2 class="page-title" [ngClass]="{ mobile: utilService.isMobile }">
+  {{ "home.text.summary" | translate }}
+</h2>
+<section class="about" [ngClass]="{ mobile: utilService.isMobile }">
+  <div class="sub-title">{{ "about.text.nearsolution" | translate }}</div>
+  <div class="description">{{ "about.text.description" | translate }}</div>
+  <div class="img-box" data-aos="fade-up" data-aos-duration="1000">
+    <img
+      [src]="
+        utilService.isMobile
+          ? '/assets/image/m-img-company-1.png'
+          : '/assets/image/img-company-1.jpg'
+      "
+      alt="description"
+    />
+    <div class="text-area">
+      <div class="text">{{ "about.text.summary-description" | translate }}</div>
+      <div class="text">
+        {{ "about.text.summary-description2" | translate }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="status" [ngClass]="{ mobile: utilService.isMobile }">
+  <div class="sub-title">{{ "about.text.company-status" | translate }}</div>
+  <div class="contents-list">
+    <div
+      class="contents"
+      alt="history"
+      data-aos="flip-left"
+      data-aos-duration="1000"
+    >
+      <img src="/assets/image/img-company-2.png" alt="establish" />
+      <div>
+        <div class="text">{{ "about.text.establish" | translate }}</div>
+        <div class="text">{{ "2017" + ("about.text.year" | translate) }}</div>
+      </div>
+    </div>
+    <div
+      class="contents"
+      alt="history"
+      data-aos="flip-left"
+      data-aos-duration="1000"
+    >
+      <img src="/assets/image/img-company-3.png" alt="take" />
+      <div>
+        <div class="text">{{ "about.text.take" | translate }}</div>
+        <div class="text">{{ "10" + ("about.text.billion" | translate) }}</div>
+      </div>
+    </div>
+    <div
+      class="contents"
+      alt="history"
+      data-aos="flip-left"
+      data-aos-duration="1000"
+    >
+      <img src="/assets/image/img-company-4.png" alt="employee" />
+      <div>
+        <div class="text">{{ "about.text.employee" | translate }}</div>
+        <div class="text">
+          {{ "10" + ("about.text.number-of-people" | translate) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chart" [ngClass]="{ mobile: utilService.isMobile }">
+  <div class="sub-title">{{ "about.text.organization-cart" | translate }}</div>
+  <img
+    [src]="
+      utilService.isMobile
+        ? '/assets/image/m-img-company-5.png'
+        : '/assets/image/img-company-5.png'
+    "
+    alt="organization-cart"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+  />
+  <button
+    *ngIf="!utilService.isMobile"
+    class="button-top"
+    (click)="scrollTop()"
+  >
+    <i class="btn-top"></i>
+    <div>Top</div>
+  </button>
+</section>

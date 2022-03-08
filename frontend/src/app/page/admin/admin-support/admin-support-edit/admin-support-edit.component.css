@@ -1,0 +1,14 @@
+h2 {
+  margin: 22px 0 41px;
+  color: var(--main-color);
+  font-family: NotoSansCJKkr-bold;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

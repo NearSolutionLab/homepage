@@ -1,0 +1,13 @@
+<app-menu-bar
+  [mainPage]="'about'"
+  [subPageList]="subPageList"
+  [subPage]="page"
+></app-menu-bar>
+
+<section [ngSwitch]="page" [ngClass]="{ mobile: utilService.isMobile }">
+  <app-summary *ngSwitchCase="'summary'"></app-summary>
+  <app-vision *ngSwitchCase="'vision'"></app-vision>
+  <app-history *ngSwitchCase="'history'"></app-history>
+  <app-partners *ngSwitchCase="'partner'"></app-partners>
+  <app-map *ngSwitchCase="'map'"></app-map>
+</section>

@@ -1,0 +1,35 @@
+<div
+  class="select-list-box"
+  [ngClass]="{ focus: focus }"
+  tabindex="-1"
+  (focusout)="onFocusout($event)"
+  (click)="openListObjects($event)"
+  (mousewheel)="$event.stopPropagation()"
+>
+  <!-- <div
+  class="select-list-box"
+  [ngClass]="{ typeC: type === 'c', typeA: type === 'a', focus: focus }"
+  tabindex="-1"
+  (click)="openListObjects($event)"
+> -->
+  <span class="selected-name">{{
+    "home.text." + selectedObject | translate
+  }}</span>
+  <i class="btn-drop-open-sub"></i>
+  <ul *ngIf="listObjects" class="select-list">
+    <li
+      *ngFor="let listObject of listObjects"
+      (click)="selectObject($event, listObject)"
+      [ngClass]="{
+        on:
+          (!selectedObject && listObject[keyId] === 'none') ||
+          (selectedObject &&
+            ((listObject[keyId] &&
+              listObject[keyId] === selectedObject[keyId]) ||
+              listObject === selectedObject))
+      }"
+    >
+      <span>{{ "home.text." + listObject | translate }}</span>
+    </li>
+  </ul>
+</div>

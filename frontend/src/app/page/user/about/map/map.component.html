@@ -1,0 +1,49 @@
+<h2 class="page-title" [ngClass]="{ mobile: utilService.isMobile }">
+  {{ "home.text.map" | translate }}
+</h2>
+
+<section [ngClass]="{ mobile: utilService.isMobile }">
+  <div *ngIf="utilService.isMobile" class="text">
+    {{ "about.text.map" | translate }}
+  </div>
+  <div *ngIf="utilService.isMobile" class="text">
+    {{ "about.text.map2" | translate }}
+  </div>
+  <div id="map"></div>
+  <div class="contents-list">
+    <div class="contents" data-aos="fade-up" data-aos-duration="1000">
+      <img src="assets/image/img-address.png" alt="address" />
+      <div class="wrap">
+        <div class="name">{{ "about.text.address" | translate }}</div>
+        <div class="text">{{ "about.text.address1" | translate }}</div>
+        <div class="text">{{ "about.text.address2" | translate }}</div>
+      </div>
+    </div>
+    <div *ngIf="!utilService.isMobile" class="bar"></div>
+    <div class="contents" data-aos="fade-up" data-aos-duration="1000">
+      <img
+        src="assets/image/img-tel.png"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        alt="tel"
+      />
+      <div class="wrap">
+        <div class="name">{{ "about.text.telephone" | translate }}</div>
+        <div class="text">031) 781-9180</div>
+      </div>
+    </div>
+    <div *ngIf="!utilService.isMobile" class="bar"></div>
+    <div class="contents" data-aos="fade-up" data-aos-duration="1000">
+      <img
+        src="assets/image/img-fax.png"
+        alt="fax"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      />
+      <div class="wrap">
+        <div class="name">{{ "about.text.fax" | translate }}</div>
+        <div class="text">031) 781-9181</div>
+      </div>
+    </div>
+  </div>
+</section>

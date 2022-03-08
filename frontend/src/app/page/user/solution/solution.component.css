@@ -1,0 +1,14 @@
+section {
+  padding-top: 70px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  min-width: 1200px;
+  max-width: 1920px;
+}
+
+section.mobile {
+  padding-top: 32px;
+  min-width: unset;
+  width: 100vw;
+}

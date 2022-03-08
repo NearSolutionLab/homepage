@@ -1,0 +1,11 @@
+<nav [ngClass]="{ mobile: utilService.isMobile }">
+  <div class="home" (click)="movePage('/')"><i class="btn-home-sub"></i></div>
+  <div class="name">{{ mainPage | titlecase }}</div>
+
+  <app-select-box
+    *ngIf="subPageList"
+    [selectObjects]="subPageList"
+    [selectedObject]="subPage"
+    (selectedObjectChange)="movePage($event)"
+  ></app-select-box>
+</nav>

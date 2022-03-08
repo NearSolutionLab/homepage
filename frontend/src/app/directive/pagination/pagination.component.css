@@ -1,0 +1,37 @@
+.page-area {
+  display: flex;
+}
+.page-area div {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-area .next,
+.page-area .prev {
+  /* padding-top: 4px; */
+}
+
+.btn-number {
+  font-family: NotoSansCJKkr-regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.24px;
+  color: #b8b8b8;
+  margin: 0 7px;
+}
+
+.btn-number.on {
+  font-family: NotoSansCJKkr-bold;
+  font-weight: bold;
+  color: var(--font-black);
+}
+
+i {
+  width: 21px;
+  height: 21px;
+  background-size: contain;
+}

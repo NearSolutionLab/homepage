@@ -1,0 +1,78 @@
+<ng-container>
+  <nav *ngIf="utilService.isMobile">
+    <div class="home"><i class="btn-home-sub"></i></div>
+    <div class="search-bar" [ngClass]="{ mobile: utilService.isMobile }">
+      <div class="input-box">
+        <input
+          type="text"
+          placeholder="{{ 'reference.text.search' | translate }}"
+          [(ngModel)]="keyWord"
+          (keypress)="searchDataByKeyword($event)"
+        />
+      </div>
+      <button class="search-button" (click)="searchDataByKeyword($event)">
+        <i class="btn-search"></i>
+      </button>
+    </div>
+  </nav>
+
+  <section [ngClass]="{ mobile: utilService.isMobile }">
+    <div *ngIf="!utilService.isMobile" class="header">
+      <div class="search-bar">
+        <div class="input-box">
+          <input
+            type="text"
+            placeholder="{{ 'reference.text.search' | translate }}"
+            [(ngModel)]="keyWord"
+            (keypress)="searchDataByKeyword($event)"
+          />
+        </div>
+        <button class="search-button" (click)="searchDataByKeyword($event)">
+          <i class="btn-search"></i>
+        </button>
+      </div>
+    </div>
+    <div class="body">
+      <div class="tag-box">
+        <div class="category">
+          {{ "reference.text.used-tag" | translate }}
+        </div>
+        <ul class="tag-list">
+          <li
+            class="tag"
+            *ngFor="let tag of tagList; let i = index"
+            [ngClass]="{ on: tag.selected }"
+            (click)="searchByTag(i)"
+          >
+            <span class="text">{{ "#" + tag.name }}</span>
+            <span class="number">{{ tag.count }}</span>
+          </li>
+        </ul>
+      </div>
+      <ul class="contents-list">
+        <li class="contents" *ngFor="let reference of referenceList">
+          <div class="thumb-nail" (click)="pageMove('detail', reference.id)">
+            <img [src]="reference.imageUrl" alt="{{ 'referenceImage' }}" />
+            <div class="card">
+              <i class="btn-more-solution"></i>
+              <div class="detail">
+                {{ "reference.text.detail" | translate }}
+              </div>
+            </div>
+          </div>
+          <div class="title">{{ reference.title }}</div>
+          <ul class="tag-list">
+            <li class="tag" *ngFor="let tag of reference.tagList">
+              {{ "#" + tag }}
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <app-pagination
+      [(currentPage)]="currentPage"
+      [totalPage]="totalPage"
+    ></app-pagination>
+  </section>
+</ng-container>

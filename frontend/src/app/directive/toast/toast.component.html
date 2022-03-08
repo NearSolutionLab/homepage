@@ -1,0 +1,10 @@
+<ul id="toasts">
+  <li
+    *ngFor="let toast of toastService.toasts; let i = index"
+    class="{{ toast.type }}"
+  >
+    <i class="icon-toast-{{ toast.type }}"></i>
+    <span class="text">{{ toast.text }}</span>
+    <i class="btn-toast-close" (click)="onClose(i)"></i>
+  </li>
+</ul>

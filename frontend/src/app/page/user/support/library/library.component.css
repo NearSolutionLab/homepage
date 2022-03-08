@@ -1,0 +1,126 @@
+h2 {
+  margin: 22px 0 41px;
+  color: var(--main-color);
+  font-family: NotoSansCJKkr-bold;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+h2.mobile {
+  font-size: 23px;
+  margin-top: 0;
+  margin-bottom: 19px;
+  letter-spacing: -2.88px;
+}
+
+
+section {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 40px;
+  padding-bottom: 30px;
+}
+
+section.mobile {
+  width: 100vw;
+}
+
+section.mobile {
+  width: 100vw;
+  padding: 0 16px;
+  padding-bottom: 30px;
+}
+
+.file-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 66px;
+  row-gap: 6px;
+  padding: 0;
+  margin-bottom: 50px;
+}
+section.mobile .file-list {
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 20px;
+}
+.file {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.container {
+  width: 516px;
+  height: 115px;
+  padding: 17px 28px;
+  border-radius: 8px;
+  border: solid 1px var(--grey-border);
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section.mobile .container {
+  width: 90vw;
+  height: 40vw;
+}
+.text-area {
+  width: 80%;
+}
+
+.title {
+  font-family: NotoSansKR-medium;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.41px;
+  color: var(--font-black);
+}
+
+section.mobile .title{
+  font-size: 16px;
+  letter-spacing: -1.41px;
+}
+.description {
+  font-family: NotoSansKR-regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.24px;
+  color: var(--font-black);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+section.mobile .description {
+  font-size: 14px;
+  letter-spacing: -1.24px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+app-pagination {
+  display: flex;
+  justify-content: center;
+}

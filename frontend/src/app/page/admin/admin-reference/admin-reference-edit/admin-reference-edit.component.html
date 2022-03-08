@@ -1,0 +1,45 @@
+<h2>레퍼런스 등록</h2>
+
+<section class="form">
+  <div class="title">
+    <div class="text">제목</div>
+    <div class="input-box">
+      <input type="text" placeholder="제목입니다" [(ngModel)]="title" />
+    </div>
+  </div>
+  <div class="contents">
+    <div class="text">내용</div>
+    <ckeditor
+      class="editor"
+      [ngModel]="description"
+      (ngModelChange)="description = $event"
+      #editor
+      [config]="{
+        height: '490px',
+        width: '1080px'
+      }"
+      (ready)="editorReady = true"
+    ></ckeditor>
+  </div>
+  <div class="tag-area">
+    <div class="text">태그</div>
+    <div class="input-wrap">
+      <div class="input-box">
+        <input type="text" [(ngModel)]="newTag" (keypress)="addTag($event)" />
+      </div>
+      <ul class="tag-list">
+        <li class="tag" *ngFor="let tag of tagList; index as i">
+          {{ "#" + tag }}<i class="btn-delete-tag" (click)="deleteTag(i)"></i>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="file">
+    <div class="text">대표이미지</div>
+    <div class="button-area">
+      <label for="file">파일선택</label>
+      <input type="file" id="file" (change)="fileUpload($event)" />
+    </div>
+  </div>
+  <button class="register" (click)="setReference()">완료</button>
+</section>

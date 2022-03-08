@@ -1,0 +1,11 @@
+<h2 class="page-title" [ngClass]="{ mobile: utilService.isMobile }">
+  {{ "home.text.partner" | translate }}
+</h2>
+<section [ngClass]="{ mobile: utilService.isMobile }">
+  <div class="text">{{ "about.text.partner-description" | translate }}</div>
+  <div class="img-list">
+    <ng-container *ngFor="let image of images; let i; as: index">
+      <img src="{{ image.src }}" alt="{{ 'partner' + i }}" />
+    </ng-container>
+  </div>
+</section>

@@ -1,0 +1,11 @@
+<app-menu-bar
+  [mainPage]="'business'"
+  [subPageList]="subPageList"
+  [subPage]="page"
+></app-menu-bar>
+
+<section [ngSwitch]="page" [ngClass]="{ mobile: utilService.isMobile }">
+  <app-consulting *ngSwitchCase="'consulting'"></app-consulting>
+  <app-optimization *ngSwitchCase="'optimization'"></app-optimization>
+  <app-logitics-system *ngSwitchCase="'logiticsSystem'"></app-logitics-system>
+</section>

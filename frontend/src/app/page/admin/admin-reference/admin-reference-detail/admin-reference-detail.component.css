@@ -1,0 +1,83 @@
+h2 {
+  width: 100%;
+  min-width: 1200px;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+section {
+  margin: 0 auto;
+  width: 800px;
+}
+
+section img {
+  width: 100%;
+}
+
+.tag-list {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 22px;
+  padding-left: 0;
+  margin-bottom: 40px;
+}
+
+.tag {
+  padding: 2px 12px 3px 13px;
+  border-radius: 12.5px;
+  background-color: #f1f1f1;
+  color: var(--main-color);
+  font-family: NotoSansCJKkr-medium;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.24px;
+  margin-right: 16px;
+  margin-bottom: var(--tage-margin-bottom);
+}
+
+.button-area {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+button {
+  border: none;
+  width: 90px;
+  height: 38px;
+  background-color: var(--main-color);
+  color: var(--white);
+  font-family: NotoSansKR-bold;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+}
+
+section pre {
+  white-space: pre-wrap;
+}
+
+.contents{
+  width: 100%;
+}
+
+
+section.mobile .contents img{
+  width: 100% !important;
+  height: auto;
+}

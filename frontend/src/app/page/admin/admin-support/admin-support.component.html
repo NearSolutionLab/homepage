@@ -1,0 +1,4 @@
+<app-menu-bar [mainPage]="'support'"></app-menu-bar>
+
+<app-admin-support-list *ngIf="!page"></app-admin-support-list>
+<app-admin-support-edit *ngIf="page === 'edit'"></app-admin-support-edit>

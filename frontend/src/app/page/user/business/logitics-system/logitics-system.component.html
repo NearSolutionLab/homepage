@@ -1,0 +1,31 @@
+<section [ngClass]="{ mobile: utilService.isMobile }">
+  <h2 class="page-title" [ngClass]="{ mobile: utilService.isMobile }">
+    {{ "home.text.logiticsSystem" | translate }}
+  </h2>
+
+  <div *ngIf="!utilService.isMobile" class="description">
+    {{ "business.text.logitics-description" | translate }}
+  </div>
+  <div *ngIf="!utilService.isMobile" class="description">
+    {{ "business.text.logitics-description2" | translate }}
+  </div>
+  <div *ngIf="utilService.isMobile" class="description">
+    {{ "business.text.logitics-description" | translate }}
+    {{ "business.text.logitics-description2" | translate }}
+  </div>
+
+  <div class="text-area">
+    <div class="text">{{ "business.text.logitics-detail" | translate }}</div>
+    <div class="text">{{ "business.text.logitics-detail2" | translate }}</div>
+  </div>
+
+  <div class="img-area">
+    <img
+      src="/assets/image/img-smart-1.png"
+      alt="smart"
+      alt="consulting"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    />
+  </div>
+</section>

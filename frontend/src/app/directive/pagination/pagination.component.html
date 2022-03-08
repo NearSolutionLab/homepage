@@ -1,0 +1,16 @@
+<div class="page-area">
+  <div *ngIf="totalPage.length > 1" class="previous" (click)="onPreviousPage()">
+    <i class="btn-previous-slide"></i>
+  </div>
+  <div
+    class="btn-number"
+    *ngFor="let page of totalPage"
+    [ngClass]="{ on: currentPage === page }"
+    (click)="selectPage(page)"
+  >
+    {{ page }}
+  </div>
+  <div *ngIf="totalPage.length > 1" class="next" (click)="onNextPage()">
+    <i class="btn-next-slide"></i>
+  </div>
+</div>

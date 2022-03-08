@@ -1,0 +1,10 @@
+section {
+  padding-top: 70px;
+  min-width: 1200px;
+}
+
+section.mobile {
+  padding-top: 32px;
+  min-width: unset;
+  width: 100vw;
+}

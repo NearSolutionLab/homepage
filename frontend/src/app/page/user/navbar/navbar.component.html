@@ -1,0 +1,304 @@
+<header id="header" [ngClass]="{ mobile: isMobile }">
+  <nav>
+    <h1>
+      <a class="home" (click)="pageMove('/')"><i class="img-logo"></i></a>
+    </h1>
+    <ul
+      *ngIf="!isMobile"
+      class="menu-list"
+      (mouseenter)="mouseHover()"
+      (mouseleave)="mouseLeave()"
+    >
+      <li
+        class="menu-title"
+        (mouseenter)="menuMouseIn(0)"
+        (mouseleave)="menuMouseOut(0)"
+        r
+        [ngClass]="{ hover: listHover[0] }"
+      >
+        <a>Business</a>
+      </li>
+      <li
+        class="menu-title"
+        (mouseenter)="menuMouseIn(1)"
+        (mouseleave)="menuMouseOut(1)"
+        [ngClass]="{ hover: listHover[1] }"
+      >
+        <a (click)="pageMove('/solution/nearView')">Solution</a>
+      </li>
+      <li
+        class="menu-title"
+        (mouseenter)="menuMouseIn(2)"
+        (mouseleave)="menuMouseOut(2)"
+        [ngClass]="{ hover: listHover[2] }"
+      >
+        <a>Reference</a>
+      </li>
+      <li
+        class="menu-title"
+        (mouseenter)="menuMouseIn(3)"
+        (mouseleave)="menuMouseOut(3)"
+        [ngClass]="{ hover: listHover[3] }"
+      >
+        <a (click)="pageMove('/about/summary')">About</a>
+      </li>
+      <li
+        class="menu-title"
+        (mouseenter)="menuMouseIn(4)"
+        (mouseleave)="menuMouseOut(4)"
+        [ngClass]="{ hover: listHover[4] }"
+      >
+        <a>Support</a>
+      </li>
+    </ul>
+    <div>
+      <a *ngIf="!isMobile" class="solomon">Solomon</a>
+      <div class="select-box"></div>
+      <i
+        *ngIf="isMobile"
+        class="{{ onMenu ? 'btn-menu-close' : 'btn-menu' }}"
+        (click)="toggleMenu()"
+      ></i>
+    </div>
+  </nav>
+  <div
+    *ngIf="!isMobile"
+    class="dropdown-box"
+    [ngClass]="{ hover: isNavHover }"
+    (mouseenter)="mouseHover()"
+    (mouseleave)="mouseLeave()"
+  >
+    <ul class="menu-list">
+      <li
+        class="menu"
+        (mouseenter)="menuMouseIn(0)"
+        (mouseleave)="menuMouseOut(0)"
+      >
+        <div>Business</div>
+        <ul class="submenu-list">
+          <li class="submenu">
+            <a (click)="pageMove('/business/logiticsSystem')">
+              {{ "home.text.logiticsSystem" | translate }}
+            </a>
+          </li>
+          <li class="submenu">
+            <a (click)="pageMove('/business/consulting')">{{
+              "home.text.consulting" | translate
+            }}</a>
+          </li>
+          <li class="submenu">
+            <a (click)="pageMove('/business/optimization')">{{
+              "home.text.optimization" | translate
+            }}</a>
+          </li>
+        </ul>
+      </li>
+      <li
+        class="menu"
+        (mouseenter)="menuMouseIn(1)"
+        (mouseleave)="menuMouseOut(1)"
+      >
+        <div><a>Solution</a></div>
+        <ul class="submenu-list">
+          <li class="submenu">
+            <a (click)="pageMove('/solution/nearView')">{{
+              "home.text.nearView" | translate
+            }}</a>
+          </li>
+          <li class="submenu">
+            <a (click)="pageMove('/solution/ptlSystem')">
+              {{ "home.text.ptlSystem" | translate }}</a
+            >
+          </li>
+          <li class="submenu">
+            <a (click)="pageMove('/solution/dynamicPut')">{{
+              "home.text.dynamicPut" | translate
+            }}</a>
+          </li>
+          <li class="submenu">
+            <a (click)="pageMove('/solution/wes')">WES</a>
+          </li>
+          <li class="submenu">
+            <a (click)="pageMove('/solution/picking')">
+              {{ "home.text.picking" | translate }}</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li
+        class="menu"
+        (mouseenter)="menuMouseIn(2)"
+        (mouseleave)="menuMouseOut(2)"
+      >
+        <div><a>Reference</a></div>
+        <ul class="submenu-list">
+          <li class="submenu">
+            <a (click)="pageMove('/reference')">Reference</a>
+          </li>
+        </ul>
+      </li>
+      <li
+        class="menu"
+        (mouseenter)="menuMouseIn(3)"
+        (mouseleave)="menuMouseOut(3)"
+      >
+        <div><a>About</a></div>
+        <ul class="submenu-list">
+          <li class="submenu">
+            <a (click)="pageMove('/about/summary')">{{
+              "home.text.summary" | translate
+            }}</a>
+          </li>
+          <li class="submenu">
+            <a (click)="pageMove('/about/vision')">
+              {{ "home.text.vision" | translate }}</a
+            >
+          </li>
+          <li class="submenu">
+            <a (click)="pageMove('/about/history')">{{
+              "home.text.history" | translate
+            }}</a>
+          </li>
+          <li class="submenu">
+            <a (click)="pageMove('/about/partner')">{{
+              "home.text.partner" | translate
+            }}</a>
+          </li>
+          <li class="submenu">
+            <a (click)="pageMove('/about/map')">{{
+              "home.text.map" | translate
+            }}</a>
+          </li>
+        </ul>
+      </li>
+      <li
+        class="menu"
+        (mouseenter)="menuMouseIn(4)"
+        (mouseleave)="menuMouseOut(4)"
+      >
+        <div><a>Support</a><i class="m-btn-drop-open"></i></div>
+        <ul class="submenu-list">
+          <li class="submenu">
+            <a (click)="pageMove('/support/library')">{{
+              "home.text.library" | translate
+            }}</a>
+          </li>
+          <li class="submenu">
+            <a (click)="pageMove('/support/quote')">{{
+              "home.text.quote" | translate
+            }}</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="menu">
+        <div><a>Solomon</a></div>
+        <ul class="submenu-list">
+          <li class="submenu">
+            <a>{{ "home.text.about-service" | translate }}</a>
+          </li>
+          <li class="submenu">
+            <a>{{ "home.text.how-to-use" | translate }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="isMobile" class="mobile-dropdown-box" [ngClass]="{ on: onMenu }">
+    <ul class="menu-list">
+      <li class="menu">
+        <div [ngClass]="{ on: menuIndex === 0 }" (click)="selectListMenu(0)">
+          <a>Business</a>
+          <i class="m-btn-drop-open" [ngClass]="{ on: menuIndex === 0 }"></i>
+        </div>
+        <ul class="submenu-list" [ngClass]="{ on: menuIndex === 0 }">
+          <li class="submenu" (click)="pageMove('/business/logiticsSystem')">
+            {{ "home.text.logiticsSystem" | translate }}
+          </li>
+          <li class="submenu" (click)="pageMove('/business/consulting')">
+            {{ "home.text.consulting" | translate }}
+          </li>
+          <li class="submenu" (click)="pageMove('/business/optimization')">
+            {{ "home.text.optimization" | translate }}
+          </li>
+        </ul>
+      </li>
+      <li class="menu">
+        <div [ngClass]="{ on: menuIndex === 1 }" (click)="selectListMenu(1)">
+          <a>Solution</a>
+          <i class="m-btn-drop-open" [ngClass]="{ on: menuIndex === 1 }"></i>
+        </div>
+        <ul class="submenu-list" [ngClass]="{ on: menuIndex === 1 }">
+          <li class="submenu" (click)="pageMove('/solution/nearView')">
+            {{ "home.text.nearView" | translate }}
+          </li>
+          <li class="submenu" (click)="pageMove('/solution/ptlSystem')">
+            {{ "home.text.ptlSystem" | translate }}
+          </li>
+          <li class="submenu" (click)="pageMove('/solution/dynamicPut')">
+            {{ "home.text.dynamicPut" | translate }}
+          </li>
+          <li class="submenu" (click)="pageMove('/solution/wes')">WES</li>
+          <li class="submenu" (click)="pageMove('/solution/picking')">
+            {{ "home.text.picking" | translate }}
+          </li>
+        </ul>
+      </li>
+      <li class="menu">
+        <div (click)="pageMove('/reference')"><a>Reference</a></div>
+      </li>
+      <li class="menu">
+        <div [ngClass]="{ on: menuIndex === 2 }" (click)="selectListMenu(2)">
+          <a>About</a>
+          <i class="m-btn-drop-open" [ngClass]="{ on: menuIndex === 2 }"></i>
+        </div>
+        <ul class="submenu-list" [ngClass]="{ on: menuIndex === 2 }">
+          <li class="submenu" (click)="pageMove('/about/summary')">
+            {{ "home.text.summary" | translate }}
+          </li>
+          <li class="submenu" (click)="pageMove('/about/vision')">
+            {{ "home.text.vision" | translate }}
+          </li>
+          <li class="submenu" (click)="pageMove('/about/history')">
+            {{ "home.text.history" | translate }}
+          </li>
+          <li class="submenu" (click)="pageMove('/about/partner')">
+            {{ "home.text.partner" | translate }}
+          </li>
+          <li class="submenu" (click)="pageMove('/about/map')">
+            {{ "home.text.map" | translate }}
+          </li>
+        </ul>
+      </li>
+      <li class="menu">
+        <div [ngClass]="{ on: menuIndex === 3 }" (click)="selectListMenu(3)">
+          <a>Support</a>
+          <i class="m-btn-drop-open" [ngClass]="{ on: menuIndex === 3 }"></i>
+        </div>
+        <ul class="submenu-list" [ngClass]="{ on: menuIndex === 3 }">
+          <li class="submenu" (click)="pageMove('/support/library')">
+            {{ "home.text.library" | translate }}
+          </li>
+          <li class="submenu" (click)="pageMove('/support/quote')">
+            {{ "home.text.quote" | translate }}
+          </li>
+        </ul>
+      </li>
+
+      <li class="menu">
+        <div [ngClass]="{ on: menuIndex === 4 }" (click)="selectListMenu(4)">
+          <a>Solomon</a>
+          <i class="m-btn-drop-open" [ngClass]="{ on: menuIndex === 4 }"></i>
+        </div>
+        <ul class="submenu-list" [ngClass]="{ on: menuIndex === 4 }">
+          <li class="submenu">
+            {{ "home.text.about-service" | translate }}
+          </li>
+          <li class="submenu">
+            {{ "home.text.how-to-use" | translate }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>

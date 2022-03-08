@@ -1,0 +1,110 @@
+.page-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section {
+  padding: 45px 0 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.mobile {
+  padding: 26px 0 20px;
+}
+
+section .text {
+  font-family: NotoSansKR-light;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.6px;
+  text-align: center;
+  font-size: 12px;
+  color: #000;
+}
+section .text + .text {
+  margin-bottom: 24px;
+}
+.contents-list {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+section.mobile .contents-list {
+  flex-direction: column;
+  margin-top: 24px;
+}
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 336px;
+}
+section.mobile .contents {
+  width: 100%;
+  flex-direction: row;
+}
+.bar {
+  width: 1px;
+  height: 159px;
+  border: solid 1px #e8e8e8;
+  align-self: flex-end;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.mobile .wrap {
+  align-items: flex-start;
+}
+.contents img {
+  margin-bottom: 11px;
+}
+section.mobile .contents img {
+  margin-bottom: 0;
+  margin-right: 10px;
+  width: 22vw;
+}
+.contents .name {
+  font-family: NotoSansKR-bold;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.9px;
+  margin-bottom: 11px;
+  color: var(--main-color);
+}
+section.mobile .contents .name {
+  font-size: 12px;
+  letter-spacing: -1.5px;
+}
+
+.contents .text {
+  font-family: NotoSansKR-regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.31px;
+  color: var(--dark-grey);
+}
+section.mobile .contents .text {
+  font-size: 10px;
+  letter-spacing: -1.24px;
+}
+#map {
+  width: 1010px;
+  height: 393px;
+  border: solid 1px var(--dark-grey-border);
+}
+
+section.mobile #map {
+  width: 100vw;
+  height: 50vw;
+}

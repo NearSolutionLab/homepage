@@ -1,0 +1,141 @@
+.page-title {
+  margin-bottom: 38px;
+  display: flex;
+  justify-content: center;
+}
+.page-title.mobile {
+  justify-content: flex-start;
+  margin-bottom: 32px;
+}
+.page-title div {
+  width: 1100px;
+}
+.page-title.mobile div {
+  width: 100%;
+  padding-left: 25px;
+}
+section {
+  min-width: 1200px;
+}
+
+section.mobile {
+  min-width: unset;
+}
+
+.description {
+  font-family: NotoSansKR-light;
+  font-size: 23px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.15px;
+  color: var(--font-dark-black);
+  margin-bottom: 33px;
+  display: flex;
+  justify-content: center;
+}
+section.mobile .description {
+  font-size: 14px;
+  letter-spacing: -0.7px;
+  padding: 0 25px;
+}
+
+.description > div {
+  width: 1100px;
+  display: flex;
+  flex-direction: column;
+}
+section.mobile .description > div {
+  width: 100%;
+}
+
+.text-area {
+  display: flex;
+  margin-bottom: 81px;
+  justify-content: center;
+}
+
+section.mobile .text-area {
+  justify-content: flex-start;
+  margin-bottom: 23px;
+  padding-left: 17px;
+}
+.text-area > div {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+}
+section.mobile .text-area > div {
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.text-area .text {
+  margin-right: 18px;
+  font-family: NotoSansKR-bold;
+  font-size: 17px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.85px;
+  color: var(--font-dark-black);
+}
+section.mobile .text-area .text {
+  font-size: 14px;
+  letter-spacing: -0.7px;
+  margin-bottom: 14px;
+}
+.text-area .text + .text {
+  width: 500px;
+}
+
+section.mobile .text-area .text + .text {
+  width: 100%;
+}
+.img-area {
+  margin: 29px 0 38px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-width: 1200px;
+}
+
+section.mobile .img-area {
+  min-width: unset;
+}
+.img-area .box {
+  width: 100vw;
+  height: 263px;
+  margin-top: 480px;
+  background-color: var(--light-grey);
+  min-width: 1200px;
+}
+section.mobile .img-area .box {
+  min-width: unset;
+}
+.button-top {
+  position: absolute;
+  bottom: -25px;
+  left: calc(50% + 550px);
+}
+.img-area img {
+  width: 1035px;
+  left: calc(50vw - 1035px / 2);
+  position: absolute;
+}
+section.mobile .img-area img {
+  width: 100vw;
+  left: unset;
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  .img-area img {
+    left: 82.5px;
+  }
+  .button-top {
+    left: 1150px;
+  }
+}

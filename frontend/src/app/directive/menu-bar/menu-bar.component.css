@@ -1,0 +1,38 @@
+nav {
+  width: 100%;
+  border-top: 1px solid var(--grey-border);
+  border-bottom: 1px solid var(--grey-border);
+  display: flex;
+  min-width: 1200px;
+}
+nav.mobile {
+  min-width: unset;
+}
+.home {
+  width: 50px;
+  height: 50px;
+  border-left: 1px solid var(--grey-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.name {
+  display: flex;
+  align-items: center;
+  width: 147px;
+  padding-left: 15px;
+  height: 50px;
+  font-size: 13px;
+  border-left: 1px solid var(--grey-border);
+  border-right: 1px solid var(--grey-border);
+}
+nav.mobile .name {
+  width: 100px;
+}
+app-select-box {
+  width: 173px;
+  height: 50px;
+}
+nav.mobile app-select-box {
+  width: calc(100% - 150px);
+}

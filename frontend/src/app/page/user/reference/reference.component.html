@@ -1,0 +1,7 @@
+<app-menu-bar
+  *ngIf="!utilService.isMobile"
+  [mainPage]="'reference'"
+></app-menu-bar>
+
+<app-reference-list *ngIf="!page"></app-reference-list>
+<app-reference-detail *ngIf="page === 'detail'"></app-reference-detail>

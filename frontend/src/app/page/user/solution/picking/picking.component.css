@@ -1,0 +1,106 @@
+.page-title {
+  margin-bottom: 38px;
+}
+.page-title.mobile {
+  margin-bottom: 32px;
+  padding-left: 25px;
+}
+
+section {
+  padding-bottom: 67px;
+}
+
+.description {
+  font-family: NotoSansKR-light;
+  font-size: 23px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  color: var(--font-dark-black);
+  margin-bottom: 33px;
+}
+
+section.mobile .description {
+  font-size: 14px;
+  letter-spacing: -0.7;
+  padding: 0 25px;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 40px;
+  position: relative;
+}
+section.mobile .contents {
+  margin: 0;
+}
+.contents img:first-child {
+  width: 491px;
+  margin-bottom: 128px;
+}
+section.mobile img:first-child {
+  margin-bottom: 50px;
+  width: 100vw;
+}
+section.mobile img {
+  width: 100vw;
+}
+.contents img:last-child {
+  width: 801px;
+  margin-bottom: 34px;
+}
+section.mobile .contents img:last-child {
+  margin-bottom: 29px;
+  width: 100vw;
+}
+
+.text-area {
+  margin-top: 31px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, auto));
+  row-gap: 15px;
+  column-gap: 100px;
+}
+
+section.mobile .text-area {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.text-area .text {
+  font-family: NotoSansKR-bold;
+  font-size: 17px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.85px;
+  color: var(--font-black);
+}
+section.mobile .text-area .text {
+  font-size: 14px;
+  letter-spacing: -0.7px;
+}
+
+.text-area .text:nth-child(3) {
+  justify-self: flex-end;
+}
+
+.button-top {
+  position: absolute;
+  bottom: -25px;
+  left: calc(50% + 550px);
+}
+
+@media (max-width: 1200px) {
+  .button-top {
+    left: 1150px;
+  }
+}

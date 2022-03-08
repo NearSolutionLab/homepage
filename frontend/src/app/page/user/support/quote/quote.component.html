@@ -1,0 +1,34 @@
+<h2 [ngClass]="{ mobile: utilService.isMobile }">
+  {{ "home.text.quote" | translate }}
+</h2>
+
+<section class="form" [ngClass]="{ mobile: utilService.isMobile }">
+  <div class="title">
+    <div class="text">{{ "support.text.title" | translate }}</div>
+    <div class="input-box">
+      <input type="text" [(ngModel)]="title" />
+    </div>
+  </div>
+  <div class="contents">
+    <div class="text">{{ "support.text.contents" | translate }}</div>
+    <div class="text-area">
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        [(ngModel)]="contents"
+      ></textarea>
+    </div>
+  </div>
+  <div class="file">
+    <div class="text">{{ "support.text.file" | translate }}</div>
+    <div class="button-area">
+      <label for="file">{{ "support.text.select-file" | translate }}</label>
+      <input type="file" id="file" (change)="fileUpload($event)" />
+    </div>
+  </div>
+  <button class="register" (click)="sendQuote()">
+    {{ "support.text.quote" | translate }}
+  </button>
+</section>

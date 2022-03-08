@@ -1,0 +1,25 @@
+<h2>{{ "home.text.library" | translate }}</h2>
+
+<section>
+  <ul class="file-list">
+    <li class="file" *ngFor="let attachment of attachmentList; index as i">
+      <button class="delete" (click)="deleteAttachment(i)">삭제</button>
+      <div class="container">
+        <div class="text-area">
+          <div class="title">{{ attachment.title }}</div>
+          <pre class="description">{{ attachment.description }}</pre>
+        </div>
+        <i class="btn-download"></i>
+      </div>
+    </li>
+  </ul>
+
+  <div class="bottom">
+    <div class="blank"></div>
+    <app-pagination
+      [(currentPage)]="currentPage"
+      [totalPage]="totalPage"
+    ></app-pagination>
+    <button class="register" (click)="pageMove('edit')">등록</button>
+  </div>
+</section>

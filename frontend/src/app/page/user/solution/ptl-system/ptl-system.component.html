@@ -1,0 +1,111 @@
+<h2 class="page-title" [ngClass]="{ mobile: utilService.isMobile }">
+  {{ "home.text.ptlSystem" | translate }}
+</h2>
+
+<section [ngClass]="{ mobile: utilService.isMobile }">
+  <div class="description">
+    {{ "solution.text.ptl-description" | translate }}
+  </div>
+  <div class="img-area">
+    <img
+      [src]="
+        utilService.isMobile
+          ? '/assets/image/m-img-ptl-1.png'
+          : '/assets/image/img-ptl-1.png'
+      "
+      alt="ptl1"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    />
+  </div>
+  <div class="contents-list">
+    <div class="contents">
+      <img
+        src="/assets/image/img-ptl-2.png"
+        alt="ptl2"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      />
+      <div class="title">{{ "solution.text.ptl-category" | translate }}</div>
+      <ul class="table">
+        <li>
+          <div class="thead">{{ "solution.text.ptl-title" | translate }}</div>
+          <div class="tbody">
+            <div class="text">{{ "solution.text.ptl-detail" | translate }}</div>
+          </div>
+        </li>
+        <li>
+          <div class="thead">{{ "solution.text.ptl-title2" | translate }}</div>
+          <div class="tbody">
+            <div class="text">
+              {{ "solution.text.ptl-detail2" | translate }}
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="thead">{{ "solution.text.ptl-title3" | translate }}</div>
+          <div class="tbody">
+            <div class="text">
+              {{ "solution.text.ptl-detail3" | translate }}
+            </div>
+            <div class="text">
+              {{ "solution.text.ptl-detail4" | translate }}
+            </div>
+            <div class="text">
+              {{ "solution.text.ptl-detail5" | translate }}
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="contents">
+      <img
+        src="/assets/image/img-ptl-3.png"
+        alt="ptl3"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      />
+      <div class="title">{{ "solution.text.ptl-category2" | translate }}</div>
+      <ul class="table">
+        <li>
+          <div class="thead">{{ "solution.text.ptl-title" | translate }}</div>
+          <div class="tbody">
+            <div class="text">
+              {{ "solution.text.ptl-detail6" | translate }}
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="thead">{{ "solution.text.ptl-title" | translate }}</div>
+          <div class="tbody">
+            <div class="text">
+              {{ "solution.text.ptl-detail7" | translate }}
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="thead">{{ "solution.text.ptl-title3" | translate }}</div>
+          <div class="tbody">
+            <div class="text">
+              {{ "solution.text.ptl-detail8" | translate }}
+            </div>
+            <div class="text">
+              {{ "solution.text.ptl-detail9" | translate }}
+            </div>
+            <div class="text">
+              {{ "solution.text.ptl-detail10" | translate }}
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button
+      *ngIf="!utilService.isMobile"
+      class="button-top"
+      (click)="scrollTop()"
+    >
+      <i class="btn-top"></i>
+      <div>Top</div>
+    </button>
+  </div>
+</section>

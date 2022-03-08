@@ -1,0 +1,29 @@
+<h2 [ngClass]="{ mobile: utilService.isMobile }">
+  {{ "home.text.library" | translate }}
+</h2>
+
+<section [ngClass]="{ mobile: utilService.isMobile }">
+  <ul class="file-list">
+    <li class="file" *ngFor="let attachment of attachmentList; index as i">
+      <div class="container">
+        <div class="text-area">
+          <div class="title">{{ attachment.title }}</div>
+          <pre class="description">{{ attachment.description }}</pre>
+        </div>
+        <a
+          href="{{ attachment.download }}"
+          download="{{ attachment.fileName }}"
+        >
+          <i class="btn-download"></i>
+        </a>
+      </div>
+    </li>
+  </ul>
+
+  <div class="bottom">
+    <app-pagination
+      [(currentPage)]="currentPage"
+      [totalPage]="totalPage"
+    ></app-pagination>
+  </div>
+</section>

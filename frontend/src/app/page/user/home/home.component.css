@@ -1,0 +1,423 @@
+button {
+  border: none;
+  background: none;
+}
+section {
+  width: 100%;
+  min-width: 1200px;
+}
+section.mobile {
+  min-width: 100vw;
+}
+
+/* business */
+
+.business {
+  position: relative;
+  margin-bottom: 60px;
+}
+.business.mobile .inner {
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.business.mobile img {
+  width: 100%;
+}
+
+.business .detail-button {
+  position: absolute;
+  bottom: 0;
+  left: var(--home-main-margin-left);
+  z-index: 99999;
+}
+.business.mobile .detail-button {
+  left: 0;
+}
+.business .detail-button a {
+  width: 177px;
+  height: 56px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+.business .detail-button .text {
+  font-family: NotoSansKR-regular;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  color: var(--white);
+}
+
+.business .description {
+  position: absolute;
+  left: var(--home-main-margin-left);
+  top: 8vw;
+  z-index: 99999;
+}
+.business.mobile .description {
+  left: var(--home-mobile-margin-left);
+  top: 50px;
+}
+.business .description .text {
+  font-family: NotoSansKR-regular;
+  font-size: 45px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -2.5px;
+  color: var(--white);
+}
+.business.mobile .description .text {
+  font-size: 21px;
+}
+.business .description .text > span {
+  color: var(--sky-blue);
+}
+.business .description .text > span.blue {
+  color: var(--main-color);
+}
+.business .description .text + .text {
+  font-size: 35px;
+  font-weight: normal;
+  font-family: NotoSansKR-light;
+  margin-bottom: 20px;
+}
+.business.mobile .description .text + .text {
+  font-size: 15px;
+}
+.business .button-area {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: var(--home-main-margin-left);
+  top: calc(8vw + 140px);
+}
+
+.business.mobile .button-area {
+  left: var(--home-mobile-margin-left);
+  top: 120px;
+}
+
+/* mobile */
+
+/* solution */
+.solution {
+  margin-bottom: 120px;
+}
+.solution.mobile {
+  margin-bottom: 73px;
+}
+.solution .img-list {
+  position: relative;
+}
+.solution .description {
+  margin-left: var(--home-main-margin-left);
+}
+.solution.mobile .description {
+  margin-left: var(--home-mobile-margin-left);
+}
+.solution .description .title {
+  font-family: NotoSansKR;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  color: var(--main-color);
+  margin-bottom: 38px;
+}
+.solution.mobile .description .title {
+  font-size: 23px;
+  margin-bottom: 13px;
+}
+.solution .description .info-area {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin-bottom: 53px;
+}
+.solution.mobile .description .info-area {
+  margin-bottom: 13px;
+}
+.solution img {
+  width: 95%;
+}
+.solution.mobile img {
+  width: 100%;
+}
+.solution .description .info {
+  display: flex;
+  flex-direction: column;
+}
+.solution .description .info span {
+  font-family: NotoSansCJKkr;
+  font-size: 22px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -1.25px;
+  color: var(--font-black);
+}
+.solution.mobile .description .info span {
+  font-size: 14px;
+}
+.solution .img-block {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.solution.mobile .img-block {
+  height: 140px;
+  margin-bottom: 5px;
+}
+.solution .img-block img {
+  transition: 0.5s;
+}
+.solution .img-block :hover img {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+.solution .img-block .card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2;
+  background-color: transparent;
+  pointer-events: auto;
+  z-index: 50;
+}
+
+.solution .img-block:hover .card {
+  opacity: 0.5;
+  transition: 0.2;
+  background: #000000;
+}
+.solution .img-block:hover + img {
+  transform: scale(1.2);
+}
+.solution .img-block:hover .card i {
+  display: block;
+}
+.solution .img-block .card:hover .info {
+  display: block;
+}
+.solution .card i {
+  display: none;
+  margin-bottom: 25px;
+}
+.solution .card .name {
+  display: block;
+  font-family: NotoSansKR-light;
+  font-size: 23px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  color: var(--white);
+}
+
+.solution.mobile .card .name {
+  font-size: 16px;
+}
+
+.solution .card .info {
+  font-family: NotoSansCJKkr;
+  font-size: 17px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.53;
+  letter-spacing: -0.85px;
+  display: none;
+}
+.solution.mobile .next {
+  position: absolute;
+}
+/* reference */
+.reference {
+  position: relative;
+  margin-bottom: 76px;
+  overflow: hidden;
+}
+.reference img {
+  width: 100%;
+  max-width: 1920px;
+  transition: 1s;
+}
+.reference img:hover {
+  transform: scale(1.3);
+  transition: 1s;
+}
+.reference .title {
+  font-family: NotoSansKR-bold;
+  font-size: 45px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -2.5px;
+  color: var(--white);
+  text-align: right;
+  margin-bottom: 1vw;
+}
+
+.reference.mobile .title {
+  font-size: 23px;
+}
+.reference .info {
+  font-family: NotoSansKR-light;
+  font-size: 17px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.85px;
+  color: var(--white);
+  text-align: right;
+}
+
+.reference.mobile .info {
+  font-size: 14px;
+}
+
+.reference .description {
+  position: absolute;
+  right: 23vw;
+  top: 6.8vw;
+}
+.reference.mobile .description {
+  right: 14px;
+  top: unset;
+  bottom: calc(2.3vw + 70px);
+}
+.reference .detail-button {
+  position: absolute;
+  right: 23vw;
+  bottom: 7.3vw;
+  cursor: pointer;
+}
+.reference.mobile .detail-button {
+  right: 14px;
+}
+.reference .detail-button a {
+  display: flex;
+  align-items: center;
+}
+.reference .detail-button div {
+  font-family: NotoSansKR-bold;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  color: var(--white);
+  margin-right: 17px;
+}
+.reference.mobile .detail-button div {
+  font-size: 12px;
+}
+/* partner */
+.partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 69px;
+}
+.partners.mobile {
+  margin-bottom: 20px;
+}
+.partners .title {
+  font-family: NotoSansKR;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  color: var(--main-color);
+  margin-bottom: 19px;
+}
+.partners.mobile .title {
+  font-size: 23px;
+}
+.partners .description {
+  font-family: NotoSansKR-light;
+  font-size: 22px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.85px;
+  color: var(--font-dark-black);
+  margin-bottom: 64px;
+}
+.partners.mobile .description {
+  font-size: 14px;
+  margin-bottom: 45px;
+  width: 305px;
+  text-align: center;
+}
+.partners .img-list {
+  display: flex;
+  align-items: center;
+  width: 1100px;
+}
+.partners.mobile .img-list {
+  width: calc(100vw - 36px);
+  position: relative;
+}
+.partners .img-list img {
+  width: 97%;
+}
+.partners .img-list .carousel-inner {
+  margin: 0 3px;
+}
+
+.partners.mobile button {
+  position: absolute;
+  top: -36px;
+  padding: 0;
+}
+.partners.mobile i {
+  width: 30px;
+  height: 30px;
+}
+.partners .prev {
+  margin-right: 13px;
+}
+.partners.mobile .prev {
+  margin: 0;
+  left: 0;
+}
+
+.partners .next {
+  margin-left: 13px;
+}
+.partners.mobile .next {
+  margin: 0;
+  right: 0;
+}
+@media (min-width: 1920px) {
+  .reference img {
+    margin: 0 auto;
+  }
+}

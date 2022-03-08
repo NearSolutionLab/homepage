@@ -1,0 +1,220 @@
+.page-title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.about {
+  margin-top: 76px;
+}
+.about.mobile {
+  margin-top: 28px;
+}
+.about div {
+  font-family: NotoSansKR-light;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  color: var(--font-dark-black);
+}
+
+.about .sub-title {
+  font-size: 39px;
+  letter-spacing: -1.95px;
+  font-weight: 300;
+}
+.about.mobile .sub-title {
+  font-size: 17px;
+  letter-spacing: -0.85px;
+  text-align: center;
+}
+.about .description {
+  font-size: 23px;
+  font-family: NotoSansKR-light;
+  letter-spacing: -1.15px;
+  margin-bottom: 39px;
+}
+.about.mobile .description {
+  font-size: 12px;
+  letter-spacing: -0.6px;
+  text-align: center;
+  width: 235px;
+  line-height: 25px;
+}
+.about img {
+  width: 1030px;
+}
+.about.mobile img {
+  width: 100%;
+}
+.about .img-box {
+  position: relative;
+}
+.about.mobile .img-box {
+  padding: 0 11px;
+}
+.about .text-area {
+  position: absolute;
+  bottom: 50px;
+  left: 16%;
+}
+.about.mobile .text-area {
+  left: unset;
+  bottom: unset;
+  top: 30%;
+  width: calc(100% - 22px);
+  padding: 20px 9vw;
+}
+.about .text-area .text {
+  font-family: NotoSansKR-regular;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.06;
+  letter-spacing: -1.5px;
+  text-align: center;
+  color: var(--white);
+}
+.about.mobile .text-area .text {
+  font-size: 3.1vw;
+  letter-spacing: -0.95px;
+  line-height: 1.6;
+}
+/* status */
+.status {
+  margin-top: 103px;
+  background-color: var(--light-grey);
+  padding-top: 12px;
+  padding-bottom: 65px;
+}
+.status.mobile {
+  margin-top: 36px;
+  padding-bottom: 26px;
+}
+.status .sub-title,
+.chart .sub-title {
+  font-family: NotoSansKR-regular;
+  font-size: 23px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.15px;
+  text-align: center;
+  color: var(--font-black);
+}
+.status.mobile .sub-title,
+.chart.mobile .sub-title {
+  font-size: 15px;
+  font-family: NotoSansKR-bold;
+  letter-spacing: -1.5px;
+}
+
+.status .sub-title {
+  margin-bottom: 20px;
+  margin-top: 15px;
+  font-family: NotoSansKR-regular;
+}
+.status .contents-list {
+  display: flex;
+}
+
+.status.mobile .contents-list {
+  justify-content: space-around;
+  width: 100%;
+}
+
+.status .contents {
+  margin: 0 32px;
+  display: flex;
+  align-items: center;
+}
+.status.mobile .contents {
+  flex-direction: column;
+  margin: 0;
+}
+
+.status .contents img {
+  width: 118px;
+  height: 118px;
+  margin-right: 19px;
+}
+.status.mobile .contents img {
+  width: 74px;
+  height: 74px;
+  margin: 0;
+}
+
+.status .contents .text {
+  font-family: NotoSansKR-regular;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  color: var(--darker-grey);
+}
+
+.status.mobile .contents .text {
+  font-size: 12px;
+  letter-spacing: -1.06px;
+  text-align: center;
+}
+.status .contents .text + .text {
+  font-family: NotoSansKR-bold;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  text-align: center;
+  color: var(--main-color);
+}
+.status.mobile .contents .text + .text {
+  font-size: 21px;
+  letter-spacing: -1.85px;
+}
+.chart {
+  padding-top: 45px;
+  padding-bottom: 54px;
+  position: relative;
+}
+.chart.mobile {
+  padding-top: 21px;
+  padding-bottom: 19px;
+}
+.chart .sub-title {
+  margin-bottom: 49px;
+}
+.chart.mobile .sub-title {
+  margin-bottom: 42px;
+}
+
+.chart img {
+  width: 720px;
+}
+.chart.mobile img {
+  width: 79%;
+}
+
+.button-top {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% + 550px);
+}
+
+@media (max-width: 1200px) {
+  .button-top {
+    left: 1150px;
+  }
+}

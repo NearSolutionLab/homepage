@@ -1,0 +1,191 @@
+<section class="business" [ngClass]="{ mobile: isMobile }">
+  <ngb-carousel #myCarousel>
+    <ng-template ngbSlide>
+      <div class="inner">
+        <img
+          [src]="businessImages[0].src"
+          class="d-block"
+          [ngClass]="{ 'w-100': !isMobile }"
+          alt="Img 1"
+        />
+        <div class="description">
+          <div class="text">
+            {{ "home.text.company-detail1" | translate }}
+            <span>{{ "home.text.company-detail2" | translate }}</span>
+          </div>
+          <div class="text">{{ "home.text.company-detail3" | translate }}</div>
+        </div>
+      </div>
+      <div class="detail-button" (click)="pageMove(businessImages[0].routing)">
+        <a>
+          <div class="text">{{ "home.text.detail" | translate }}</div>
+          <i class="btn-more-main"></i>
+        </a>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="inner">
+        <img
+          [src]="businessImages[1].src"
+          class="d-block"
+          [ngClass]="{ 'w-100': !isMobile }"
+          alt="Img 1"
+        />
+        <div class="description">
+          <div class="text">
+            <span class="blue">{{
+              "home.text.company-detail4" | translate
+            }}</span>
+            {{ "home.text.company-detail5" | translate }}
+          </div>
+          <div class="text">{{ "home.text.company-detail6" | translate }}</div>
+        </div>
+      </div>
+      <div class="detail-button" (click)="pageMove(businessImages[1].routing)">
+        <a>
+          <div class="text">{{ "home.text.detail" | translate }}</div>
+          <i class="btn-more-main"></i>
+        </a>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <div class="button-area">
+    <button class="prev" (click)="prev()">
+      <i class="btn-previous-main"></i>
+    </button>
+    <button class="stop" (click)="toggle()">
+      <i class="btn-stop-main"></i>
+    </button>
+    <button class="next" (click)="next()">
+      <i class="btn-next-main"></i>
+    </button>
+  </div>
+</section>
+
+<section class="solution" [ngClass]="{ mobile: isMobile }">
+  <div class="description">
+    <div class="title">Solution</div>
+    <div class="info-area">
+      <div class="info">
+        <span>{{ "home.text.solution-description" | translate }}</span>
+        <span>{{ "home.text.solution-description2" | translate }}</span>
+      </div>
+
+      <div *ngIf="!isMobile" class="button-area">
+        <button class="prev" (click)="solultionPrev()">
+          <i class="btn-previous-slide"></i>
+        </button>
+        <button class="next" (click)="solutionNext()">
+          <i class="btn-next-slide"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="image-list">
+    <p-carousel
+      *ngIf="!isMobile"
+      [value]="solutionImages"
+      [numVisible]="isMobile ? 1 : 3"
+      [numScroll]="1"
+      [showNavigators]="false"
+      [showIndicators]="false"
+      [circular]="true"
+      [autoplayInterval]="3000"
+      [page]="solutionScroll"
+      #partner
+    >
+      <ng-template let-solution pTemplate="item">
+        <div class="img-block" (click)="pageMove(solution.routing)">
+          <img
+            src="/assets/image/{{ solution.src }}"
+            alt="{{ solution.src }}"
+            data-aos="flip-right"
+            data-aos-duration="3000"
+          />
+          <div class="card">
+            <i class="btn-more-solution"></i>
+            <div class="name">{{ solution.name | translate }}</div>
+            <div class="info">{{ solution.info | translate }}</div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+    <ng-container *ngIf="isMobile">
+      <div
+        *ngFor="let solution of solutionImages"
+        class="img-block"
+        (click)="pageMove(solution.routing)"
+      >
+        <img
+          src="/assets/image/{{ solution.src }}"
+          alt="{{ solution.src }}"
+          data-aos="flip-right"
+          data-aos-duration="3000"
+        />
+        <div class="card">
+          <i class="btn-more-solution"></i>
+          <div class="name">{{ solution.name | translate }}</div>
+          <div class="info">{{ solution.info | translate }}</div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</section>
+
+<section class="reference" [ngClass]="{ mobile: isMobile }">
+  <img
+    [src]="
+      isMobile
+        ? '/assets/image/m-img-reference.png'
+        : '/assets/image/img-reference.png'
+    "
+    alt="reference"
+  />
+  <div class="description">
+    <div class="title">Reference</div>
+    <div class="info">
+      {{ "home.text.reference-description" | translate }}
+    </div>
+    <div class="info">
+      {{ "home.text.reference-description2" | translate }}
+    </div>
+  </div>
+  <div class="detail-button">
+    <a (click)="pageMove('/reference/')">
+      <div class="text">{{ "home.text.detail" | translate }}</div>
+      <i class="btn-more-main"></i>
+    </a>
+  </div>
+</section>
+<section class="partners" [ngClass]="{ mobile: isMobile }">
+  <div class="title">{{ "home.text.partner" | translate }}</div>
+  <div class="description">
+    {{ "about.text.partner-description" | translate }}
+  </div>
+  <div class="img-list">
+    <button class="prev" (click)="partnerPrev()">
+      <i class="btn-previous-slide"></i>
+    </button>
+    <p-carousel
+      [value]="partnersImages"
+      [numVisible]="isMobile ? 3 : 5"
+      [numScroll]="1"
+      [showNavigators]="false"
+      [showIndicators]="false"
+      [circular]="false"
+      [autoplayInterval]="3000"
+      [page]="partnerScroll"
+      #partner
+    >
+      <ng-template let-image pTemplate="item">
+        <div class="carousel-inner">
+          <img [src]="image" alt="{{ 'image' }}" />
+        </div>
+      </ng-template>
+    </p-carousel>
+    <button class="next" (click)="partnerNext()">
+      <i class="btn-next-slide"></i>
+    </button>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<h2 class="page-title" [ngClass]="{ mobile: utilService.isMobile }">
+  {{ "home.text.picking" | translate }}
+</h2>
+
+<section [ngClass]="{ mobile: utilService.isMobile }">
+  <div class="description">
+    {{ "solution.text.picking-description" | translate }}
+  </div>
+  <div class="contents">
+    <img
+      [src]="
+        utilService.isMobile
+          ? '/assets/image/m-img-picking-1.png'
+          : '/assets/image/img-picking-1.png'
+      "
+      alt="picking1"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    />
+    <img
+      src="/assets/image/img-picking-2.png"
+      alt="picking2"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    />
+    <ul class="text-area">
+      <li class="text">{{ "solution.text.picking-detail" | translate }}</li>
+      <li class="text">{{ "solution.text.picking-detail2" | translate }}</li>
+      <li class="text">{{ "solution.text.picking-detail3" | translate }}</li>
+      <li class="text">{{ "solution.text.picking-detail4" | translate }}</li>
+      <li class="text">{{ "solution.text.picking-detail5" | translate }}</li>
+    </ul>
+    <button
+      *ngIf="!utilService.isMobile"
+      class="button-top"
+      (click)="scrollTop()"
+    >
+      <i class="btn-top"></i>
+      <div>Top</div>
+    </button>
+  </div>
+</section>

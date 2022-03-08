@@ -1,0 +1,119 @@
+<h2 class="page-title" [ngClass]="{ mobile: utilService.isMobile }">
+  {{ "home.text.vision" | translate }}
+</h2>
+
+<section class="summary" [ngClass]="{ mobile: utilService.isMobile }">
+  <img
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    src="/assets/image/img-vision-1.png"
+    alt="vision1"
+  />
+  <div class="description">
+    <div class="text-area">
+      <span class="text">{{
+        "about.text.vision-description1" | translate
+      }}</span>
+      <span class="text blue">
+        {{ "about.text.vision-description2" | translate }}
+      </span>
+      <span class="text">
+        {{ "about.text.vision-description2-1" | translate }}
+      </span>
+      <span class="text">{{
+        "about.text.vision-description3" | translate
+      }}</span>
+      <span class="text blue">
+        {{ "about.text.vision-description4" | translate }}
+      </span>
+      <span class="text">{{
+        "about.text.vision-description5" | translate
+      }}</span>
+    </div>
+    <br /><br />
+    <div class="text-area">
+      <div class="text">
+        {{ "about.text.vision-description6" | translate
+        }}<br *ngIf="!utilService.isMobile" />
+        {{ "about.text.vision-description6-1" | translate
+        }}<br *ngIf="!utilService.isMobile" />
+        {{ "about.text.vision-description6-2" | translate }}
+      </div>
+    </div>
+  </div>
+</section>
+<section class="vision" [ngClass]="{ mobile: utilService.isMobile }">
+  <div class="sub-title">Vision</div>
+  <div class="contents-list">
+    <div class="contents" data-aos="flip-left" data-aos-duration="1000">
+      <img src="/assets/image/img-vision-2.png" alt="vision2" />
+      <div class="card">
+        <div class="text">Tech leadership</div>
+        <div class="text">
+          {{ "about.text.vision-description7" | translate }}<br />
+          {{ "about.text.vision-description7-1" | translate }}
+        </div>
+      </div>
+    </div>
+
+    <div class="contents" data-aos="flip-left" data-aos-duration="1000">
+      <img src="/assets/image/img-vision-2.png" alt="vision2" />
+      <div class="card">
+        <div class="text">Open networking</div>
+        <div class="text">
+          {{ "about.text.vision-description8" | translate }}<br />
+          {{ "about.text.vision-description8-1" | translate }}
+        </div>
+      </div>
+    </div>
+
+    <div class="contents" data-aos="flip-left" data-aos-duration="1000">
+      <img src="/assets/image/img-vision-2.png" alt="vision2" />
+      <div class="card">
+        <div class="text">Consultancy</div>
+        <div class="text">
+          {{ "about.text.vision-description9" | translate }}<br />
+          {{ "about.text.vision-description9-1" | translate }}<br />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ability" [ngClass]="{ mobile: utilService.isMobile }">
+  <div class="sub-title">{{ "about.text.ability" | translate }}</div>
+  <div class="description">
+    {{ "about.text.vision-description10" | translate }}
+  </div>
+  <div class="contents-list">
+    <div class="contents">
+      <img src="/assets/image/img-vision-3.png" alt="vision3" />
+      <div class="text">
+        {{ "about.text.vision-description11" | translate }}<br />
+        {{ "about.text.vision-description11-1" | translate }}
+      </div>
+    </div>
+    <div class="contents">
+      <img src="/assets/image/img-vision-4.png" alt="vision4" />
+      <div class="text">
+        {{ "about.text.vision-description12" | translate }}<br />
+        {{ "about.text.vision-description12-1" | translate }}
+      </div>
+    </div>
+    <div class="contents">
+      <img src="/assets/image/img-vision-5.png" alt="vision5" />
+      <div class="text">
+        {{ "about.text.vision-description13" | translate }}<br />
+        {{ "about.text.vision-description13-1" | translate }}<br />
+        {{ "about.text.vision-description13-2" | translate }}
+      </div>
+    </div>
+  </div>
+  <button
+    *ngIf="!utilService.isMobile"
+    class="button-top"
+    (click)="scrollTop()"
+  >
+    <i class="btn-top"></i>
+    <div>Top</div>
+  </button>
+</section>

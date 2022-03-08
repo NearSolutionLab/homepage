@@ -1,0 +1,45 @@
+<section [ngClass]="{ mobile: utilService.isMobile }">
+  <h2 class="page-title" [ngClass]="{ mobile: utilService.isMobile }">
+    NearView
+  </h2>
+  <div class="description">
+    {{ "solution.text.nearview-description1" | translate }}
+  </div>
+  <div class="wrap">
+    <img
+      [src]="
+        utilService.isMobile
+          ? '/assets/image/m-img-nearview-1.png'
+          : '/assets/image/img-nearview-1.png'
+      "
+      alt="nearview1"
+      data-aos="flip-left"
+      data-aos-duration="1000"
+    />
+  </div>
+  <div class="description">
+    {{ "solution.text.nearview-description2" | translate }}
+  </div>
+  <div class="img-area">
+    <img
+      src="/assets/image/img-nearview-2.png"
+      alt="nearview2"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    />
+    <img
+      src="/assets/image/img-nearview-3.png"
+      alt="nearview3"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    />
+    <button
+      *ngIf="!utilService.isMobile"
+      class="button-top"
+      (click)="scrollTop()"
+    >
+      <i class="btn-top"></i>
+      <div>Top</div>
+    </button>
+  </div>
+</section>

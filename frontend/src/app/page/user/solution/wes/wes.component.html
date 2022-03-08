@@ -1,0 +1,45 @@
+<h2 class="page-title" [ngClass]="{ mobile: utilService.isMobile }">
+  <div>WES(Warehouse Execution System)</div>
+</h2>
+<section [ngClass]="{ mobile: utilService.isMobile }">
+  <div class="description">
+    <div *ngIf="!utilService.isMobile">
+      <span> {{ "solution.text.wes-description" | translate }}</span>
+      <span>{{ "solution.text.wes-description2" | translate }}</span>
+    </div>
+    <div  *ngIf="utilService.isMobile">
+      {{ "solution.text.wes-description" | translate }}
+      {{ "solution.text.wes-description2" | translate }}
+    </div>
+  </div>
+
+  <div  class="text-area">
+    <div>
+      <div class="text">{{ "solution.text.wes-detail" | translate }}</div>
+      <div class="text">{{ "solution.text.wes-detail2" | translate }}</div>
+    </div>
+  </div>
+
+  <div class="img-area">
+    <img
+      [src]="
+        utilService.isMobile
+          ? '/assets/image/m-img-wes-1.png'
+          : '/assets/image/img-wes-1.png'
+      "
+      alt="wes1"
+      alt="consulting"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    />
+    <div *ngIf="!utilService.isMobile" class="box"></div>
+    <button
+      *ngIf="!utilService.isMobile"
+      class="button-top"
+      (click)="scrollTop()"
+    >
+      <i class="btn-top"></i>
+      <div>Top</div>
+    </button>
+  </div>
+</section>

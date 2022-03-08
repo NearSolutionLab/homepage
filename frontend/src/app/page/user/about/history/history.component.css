@@ -1,0 +1,151 @@
+.page-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-width: 1200px;
+}
+
+.page-title.mobile {
+  min-width: unset;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 45px;
+  padding-bottom: 90px;
+}
+section.mobile {
+  padding-top: 28px;
+}
+.description {
+  margin-bottom: 60px;
+  width: 100%;
+  justify-content: center;
+}
+
+section.mobile .description {
+  margin-bottom: 42px;
+  padding: 20px;
+}
+.description .text {
+  font-family: NotoSansKR-light;
+  font-size: 23px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.15px;
+  text-align: center;
+  color: var(--font-dark-black);
+}
+
+section.mobile .description .text {
+  font-size: 12px;
+  letter-spacing: -0.6px;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.mobile .wrap {
+  flex-direction: row;
+  padding: 0 10px 0 17px;
+  justify-content: flex-start;
+}
+
+img {
+  width: 946px;
+  align-self: center;
+  margin-bottom: 49px;
+}
+
+section.mobile img {
+  width: 80px;
+  height: auto;
+  margin: 0;
+  align-self: flex-start;
+}
+.contents-list {
+  display: flex;
+  width: 100%;
+  margin-left: 45px;
+  justify-content: center;
+}
+section.mobile .contents-list {
+  flex-direction: column;
+  margin: 0;
+  margin-left: 18px;
+  justify-content: flex-start;
+}
+.contents {
+  margin-right: 69px;
+}
+section.mobile .contents {
+  margin: 20px 0;
+}
+section.mobile .contents:nth-child(2) {
+  margin-top: 35px;
+}
+.contents:last-child {
+  margin-right: 0;
+}
+
+.contents .detail {
+  display: flex;
+  margin-bottom: 12px;
+}
+section.mobile .contents .detail {
+  flex-direction: column;
+}
+.contents .detail:last-child {
+  margin-bottom: 0;
+}
+.contents .detail .text {
+  font-family: NotoSansKR-regular;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  max-width: 189px;
+  color: var(--darker-grey);
+}
+section.mobile .contents .detail .text {
+  font-size: 14px;
+  max-width: unset;
+  letter-spacing: -1.24px;
+}
+.contents .detail .year {
+  font-family: NotoSansKR-bold;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+  margin-right: 5px;
+}
+section.mobile .contents .detail .year {
+  font-size: 14px;
+  letter-spacing: -1.24px;
+  margin: 0;
+}
+.contents-list .contents:last-child .text {
+  max-width: 259px;
+}
+.year.first {
+  color: #20c8e5;
+}
+.year.second {
+  color: #617dd6;
+}
+.year.third {
+  color: var(--main-color);
+}
+.year.fourth {
+  color: #1d1689;
+}

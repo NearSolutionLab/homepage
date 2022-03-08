@@ -1,0 +1,82 @@
+.select-list-box {
+  display: flex;
+  justify-content: space-between;
+  outline: none;
+  cursor: pointer;
+  align-items: center;
+  position: relative;
+  padding: 0 13px;
+  border-right: solid 1px var(--grey-border);
+}
+.select-list-box {
+  width: 100%;
+  height: 100%;
+}
+
+.select-list-box .select-list {
+  position: absolute;
+  border: solid 1px var(--grey-border);
+  background-color: #ffffff;
+  padding: 5px 0;
+  z-index: 1000;
+  display: none;
+  max-height: 512px;
+  width: calc(100% + 2px);
+  overflow-y: auto;
+}
+
+.select-list-box .selected-name,
+.select-list-box .select-list li span {
+  font-family: NotoSansKR-regular;
+  font-size: 13px;
+  font-weight: normal;
+  color: var(--font-black);
+}
+
+.select-list-box.focus i {
+  transform: rotate(180deg);
+  transition-duration: 0.2s;
+}
+.select-list-box i {
+  transform: rotate(0);
+  transition-duration: 0.2s;
+}
+.select-list-box .select-list li {
+  list-style: none;
+  padding: 4px 10px 4px 10px;
+  text-align: left;
+  display: flex;
+  font-size: 13px;
+  justify-content: flex-start;
+  align-items: center;
+  height: 45px;
+  font-family: NotoSansKR-regular;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+}
+
+.select-list-box .select-list li {
+  background-color: #ffffff;
+}
+
+.select-list-box .select-list li.on span {
+  font-family: NotoSansKR-bold;
+  font-weight: bold;
+}
+
+.select-list-box .select-list li:hover {
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+.select-list-box .select-list li span {
+  white-space: nowrap;
+}
+
+.btn-drop-open-sub {
+  width: 11px;
+  height: 6px;
+  display: inline-block;
+  background: url("/assets/icon/btn-drop-open-sub.svg");
+}

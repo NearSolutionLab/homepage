@@ -1,0 +1,33 @@
+<h2 class="page-title" [ngClass]="{ mobile: utilService.isMobile }">
+  <div>{{ "home.text.consulting" | translate }}</div>
+</h2>
+
+<section [ngClass]="{ mobile: utilService.isMobile }">
+  <div class="description">
+    <div>
+      {{ "business.text.consulting-description" | translate }}
+    </div>
+  </div>
+  <div class="text-area">
+    <div>
+      <div class="text">
+        {{ "business.text.consulting-detail" | translate }}
+      </div>
+      <div class="text">
+        {{ "business.text.consulting-detail2" | translate }}
+      </div>
+      <div class="text">
+        {{ "business.text.consulting-detail3" | translate }}
+      </div>
+    </div>
+  </div>
+
+  <div class="img-area">
+    <img
+      src="/assets/image/img-consulting.png"
+      alt="consulting"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    />
+  </div>
+</section>

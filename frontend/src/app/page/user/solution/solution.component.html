@@ -1,0 +1,13 @@
+<app-menu-bar
+  [mainPage]="'solution'"
+  [subPageList]="subPageList"
+  [subPage]="page"
+></app-menu-bar>
+
+<section [ngSwitch]="page" [ngClass]="{ mobile: utileService.isMobile }">
+  <app-near-view *ngSwitchCase="'nearView'"></app-near-view>
+  <app-ptl-system *ngSwitchCase="'ptlSystem'"></app-ptl-system>
+  <app-picking *ngSwitchCase="'picking'"></app-picking>
+  <app-dynamic-put *ngSwitchCase="'dynamicPut'"></app-dynamic-put>
+  <app-wes *ngSwitchCase="'wes'"></app-wes>
+</section>
