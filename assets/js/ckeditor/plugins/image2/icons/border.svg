@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.5" height="15.5">
+    <path fill="none" fill-rule="evenodd" stroke="#FFF" d="M.5.5h18v14H.5V.5z" opacity=".8"/>
+    <path fill="#FFF" fill-rule="evenodd" d="M2.5 2.5h14v10h-14v-10z"/>
+</svg>
