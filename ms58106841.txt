@@ -1,0 +1,5 @@
+﻿{
+  "Description": "웹 사이트 루트의 위치 Microsoft 365에 대한 도메인 소유권 확인 파일",
+  "Domain": "nearsolution.co.kr",
+  "Id": "c17f0d3c-834a-4c86-802b-4c99d0cd22f5"
+}
