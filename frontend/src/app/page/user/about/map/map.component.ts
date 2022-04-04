@@ -3,9 +3,9 @@ import { UtilService } from "src/app/service/util.service";
 
 declare var kakao: any;
 const defaultAddress = {
-  lat: 37.3857104112622,
-  lng: 127.12571694340757,
-  name: "경기도 성남시 분당구 황새울로360번길 21",
+  lat: 37.4139418,
+  lng: 127.0878377,
+  name: "경기도 성남시 수정구 달래내로46 (시흥동) 성남글로벌융합센터 A동 505호",
 };
 
 @Component({
