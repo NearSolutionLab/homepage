@@ -111,6 +111,10 @@ textarea:focus {
   outline: none;
 }
 
+.sr-only {
+  display: none !important;
+}
+
 /* title */
 h2.page-title {
   font-family: NotoSansKR-bold;

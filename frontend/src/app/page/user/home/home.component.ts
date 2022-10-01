@@ -20,13 +20,14 @@ export class HomeComponent implements OnInit {
   autoPlay: boolean = true;
   partnerScroll: number = 0;
   solutionScroll: number = 0;
+  autoPlayInterval: number = 6000;
 
   constructor(
     config: NgbCarouselConfig,
     private router: Router,
     private utilService: UtilService
   ) {
-    config.interval = 2000;
+    config.interval = this.autoPlayInterval;
     config.wrap = true;
     config.keyboard = false;
     config.showNavigationArrows = false;
@@ -41,6 +42,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnDestroy() {}
+
 
   next() {
     this.myCarousel.next();
