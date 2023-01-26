@@ -5,7 +5,7 @@ declare var kakao: any;
 const defaultAddress = {
   lat: 37.4139418,
   lng: 127.0878377,
-  name: "경기도 성남시 수정구 달래내로46 (시흥동) 성남글로벌융합센터 A동 505호",
+  name: "경기도 성남시 수정구 달래내로46 (시흥동) 성남글로벌융합센터 A동 408호",
 };
 
 @Component({
