@@ -1,9 +1,10 @@
 .img-logo {
   display: inline-block;
-  margin-top: 25px;
-  width: 187px;
-  height: 49px;
+  width: 261px;
+  height: 147px;
   background: url("/assets/image/img-logo-new.svg") no-repeat;
+  background-size: contain; /* 비율 유지하며 맞추기 */
+  background-position: center; /* 이미지 중앙에 배치 */
   vertical-align: middle;
 }
 h1 {
